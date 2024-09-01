@@ -23,45 +23,43 @@ export function SearchMockInterceptor(
     return of(
       new HttpResponse({
         status: 200,
-        body: [
-          {
-            id: 1,
-            city: 'delhi',
-            rows: [
-              [
-                { id: 1, name: 'A', class: 'economy', price: 1000 },
-                { id: 2, name: 'B', class: 'economy', price: 1000 },
-                { id: 3, name: 'C', class: 'economy', price: 1000 },
-                { id: 4, name: 'D', class: 'economy', price: 1000 },
-              ],
-
-              [
-                { id: 1, name: 'A', class: 'economy', price: 1000 },
-                { id: 2, name: 'B', class: 'economy', price: 1000 },
-                { id: 3, name: 'C', class: 'economy', price: 1000 },
-                { id: 4, name: 'D', class: 'economy', price: 1000 },
-              ],
-              [
-                { id: 1, name: 'A', class: 'economy', price: 1000 },
-                { id: 2, name: 'B', class: 'economy', price: 1000 },
-                { id: 3, name: 'C', class: 'economy', price: 1000 },
-                { id: 4, name: 'D', class: 'economy', price: 1000 },
-              ],
-              [
-                { id: 1, name: 'A', class: 'economy', price: 1000 },
-                { id: 2, name: 'B', class: 'economy', price: 1000 },
-                { id: 3, name: 'C', class: 'economy', price: 1000 },
-                { id: 4, name: 'D', class: 'economy', price: 1000 },
-              ],
-              [
-                { id: 1, name: 'A', class: 'economy', price: 1000 },
-                { id: 2, name: 'B', class: 'economy', price: 1000 },
-                { id: 3, name: 'C', class: 'economy', price: 1000 },
-                { id: 4, name: 'D', class: 'economy', price: 1000 },
-              ],
+        body: {
+          id: 1,
+          city: 'delhi',
+          rows: [
+            [
+              { id: 1, row: 1, name: 'A', class: 'economy', price: 1000 },
+              { id: 2, row: 1, name: 'B', class: 'economy', price: 1000 },
+              { id: 3, row: 1, name: 'C', class: 'economy', price: 1000 },
+              { id: 4, row: 1, name: 'D', class: 'economy', price: 1000 },
             ],
-          },
-        ],
+
+            [
+              { id: 1, row: 2, name: 'A', class: 'economy', price: 1000 },
+              { id: 2, row: 2, name: 'B', class: 'economy', price: 1000 },
+              { id: 3, row: 2, name: 'C', class: 'economy', price: 1000 },
+              { id: 4, row: 2, name: 'D', class: 'economy', price: 1000 },
+            ],
+            [
+              { id: 1, row: 3, name: 'A', class: 'economy', price: 1000 },
+              { id: 2, row: 3, name: 'B', class: 'economy', price: 1000 },
+              { id: 3, row: 3, name: 'C', class: 'economy', price: 1000 },
+              { id: 4, row: 3, name: 'D', class: 'economy', price: 1000 },
+            ],
+            [
+              { id: 1, row: 4, name: 'A', class: 'economy', price: 1000 },
+              { id: 2, row: 4, name: 'B', class: 'economy', price: 1000 },
+              { id: 3, row: 4, name: 'C', class: 'economy', price: 1000 },
+              { id: 4, row: 4, name: 'D', class: 'economy', price: 1000 },
+            ],
+            [
+              { id: 1, row: 5, name: 'A', class: 'economy', price: 1000 },
+              { id: 2, row: 5, name: 'B', class: 'economy', price: 1000 },
+              { id: 3, row: 5, name: 'C', class: 'economy', price: 1000 },
+              { id: 4, row: 5, name: 'D', class: 'economy', price: 1000 },
+            ],
+          ],
+        },
       })
     );
   } else {

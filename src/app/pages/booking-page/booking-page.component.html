@@ -1,1 +1,13 @@
-<p>booking-page works!</p>
+<div style="border: 1px solid gray; padding: 10px">
+  <section *ngFor="let row of layout.rows">
+    <button
+      style="margin: 10px"
+      *ngFor="let seat of row"
+      (click)="selectSeat(seat)"
+      [ngStyle]="{ backgroundColor: 'blue' }"
+    >
+      {{ seat.name }}
+    </button>
+  </section>
+  {{ selectedSeats | async | json }}
+</div>
