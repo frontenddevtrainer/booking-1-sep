@@ -10,4 +10,25 @@
     </button>
   </section>
   {{ selectedSeats | async | json }}
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Country</th>
+        <th scope="col">Area</th>
+        <th scope="col">Population</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (seat of selectedSeats | async; track seat.name; let i = $index) {
+      <tr>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          {{ seat.name }}
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </div>

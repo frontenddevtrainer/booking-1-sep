@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class BookingService {
   private _http = inject(HttpClient);
   
-  selectedSeats : BehaviorSubject<any> = new BehaviorSubject([]);
+  selectedSeats : BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 
   constructor() {}
 
