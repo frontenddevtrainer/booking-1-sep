@@ -4,6 +4,7 @@ import { ListingPageComponent } from './pages/listing-page/listing-page.componen
 import { PassengerInfoPageComponent } from './pages/passenger-info-page/passenger-info-page.component';
 import { ReviewBookingPageComponent } from './pages/review-booking-page/review-booking-page.component';
 import { BookingPageComponent } from './pages/booking-page/booking-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'booking',
     component: BookingPageComponent,
+  },
+  {
+    path: '**',
+    component: ErrorPageComponent,
   },
 ];
