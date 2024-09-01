@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { SearchFormComponent } from '../../forms/search-form/search-form.component';
 
 @Component({
   selector: 'book-search-page',
   standalone: true,
-  imports: [],
+  imports: [SearchFormComponent],
   templateUrl: './search-page.component.html',
   styleUrl: './search-page.component.css'
 })

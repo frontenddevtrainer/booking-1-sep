@@ -12,7 +12,7 @@ export const routes: Routes = [
     component: SearchPageComponent,
   },
   {
-    path: 'listing',
+    path: 'listing/:search',
     component: ListingPageComponent,
   },
   {
