@@ -2,6 +2,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
 import { By } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+  provideHttpClientTesting,
+} from '@angular/common/http/testing';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -14,7 +20,6 @@ describe('HeaderComponent', () => {
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
-    
   });
 
   it('should create', () => {
@@ -22,8 +27,7 @@ describe('HeaderComponent', () => {
   });
 
   it('should show the application name provided as prop', () => {
-    
-    const applicationName = "Testing Application";
+    const applicationName = 'Testing Application';
 
     component.applicationName = applicationName;
 
@@ -34,7 +38,6 @@ describe('HeaderComponent', () => {
         .nativeElement as HTMLElement
     ).innerHTML;
 
-    expect(content).toEqual(applicationName)
-
+    expect(content).toEqual(applicationName);
   });
 });
