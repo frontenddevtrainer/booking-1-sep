@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { CalculatorService } from '../../services/calculator.service';
 
 @Component({
   selector: 'book-header',
@@ -9,4 +10,7 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() applicationName: string = '';
+
+  private _calculator = inject(CalculatorService)
+
 }
