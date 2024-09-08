@@ -1,7 +1,7 @@
 <form [formGroup]="searchForm" (ngSubmit)="search()">
   <p>
     Search Tickets:
-    <input formControlName="search" />
-    <button>Search</button>
+    <input data-testid="search-control" formControlName="search" />
+    <button data-testid="search-button">Search</button>
   </p>
 </form>
