@@ -20,6 +20,10 @@ export class CalculatorService {
   }
 
   getData() {
-    return this._http.get<any[]>('http://localhost:5000/people')
+    return this._http.get<any[]>('http://localhost:5000/people');
+  }
+
+  addNewPerson(person: any) {
+    return this._http.post<any[]>('http://localhost:5000/people', person);
   }
 }
